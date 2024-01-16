@@ -1,16 +1,16 @@
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
-        int sum=0;
-        int l= nums.size();
+        int sumOffArrayElement=0;
+        int lengthOffArray= nums.size();
         for(int i=0;i<=l-1;i++){
-            sum += nums[i]; //this sum is the addition of the total no of array element
+            sumOffArrayElement += nums[i]; //this sum is the addition of the total no of array element
 
         }
 
-        int sum2= l*(l+1)/2;//this sum is the addition of the total no of  element from 0 to n
-        int missing=sum2 - sum ; 
+        int sumOffTotalElement= lengthOffArray*(lengthOffArray+1)/2;//this sum is the addition of the total no of  element from 0 to n
+        int missingElement=sumOffTotalElement - sumOffArrayElement ; 
 
-        return missing;
+        return missingElement;
     }
 };
